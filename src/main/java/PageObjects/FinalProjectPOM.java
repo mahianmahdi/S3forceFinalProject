@@ -1,8 +1,9 @@
 package PageObjects;
 
+import Utils.BaseMethods;
 import org.openqa.selenium.By;
 
-public class FinalProjectPOM {
+public class FinalProjectPOM extends BaseMethods {
     public By signin = new By.ByCssSelector(".login");
     public By emailReg = new By.ByCssSelector("#email_create");
     public By createAccount = new By.ByCssSelector("#SubmitCreate");
@@ -18,6 +19,7 @@ public class FinalProjectPOM {
     public By zipCode = new By.ByCssSelector("input#postcode");
     public By mobile = new By.ByCssSelector("#phone_mobile");
     public By register = new By.ByCssSelector("#submitAccount");
+    public By myAccount = new By.ByCssSelector(".info-account");
     public By logout = new By.ByCssSelector(".logout");
     public By username = new By.ByCssSelector("#email");
     public By userPassword = new By.ByCssSelector("#passwd");

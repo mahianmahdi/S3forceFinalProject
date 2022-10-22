@@ -59,6 +59,7 @@ public class FinalProject extends BaseMethods {
         driver.findElement(page.zipCode).sendKeys(fake.address().zipCodeByState("NY"));
         driver.findElement(page.mobile).sendKeys(phone);
         driver.findElement(page.register).click();
+        Assert.assertTrue(driver.findElement(page.myAccount).isDisplayed());
         wait.until(ExpectedConditions.visibilityOfElementLocated(page.logout));
         driver.findElement(page.logout).click();
     }
@@ -72,19 +73,12 @@ public class FinalProject extends BaseMethods {
         driver.findElement(page.username).sendKeys(username);
         driver.findElement(page.userPassword).sendKeys(password);
         driver.findElement(page.signInBtn).click();
+        Assert.assertTrue(driver.findElement(page.myAccount).isDisplayed());
     }
 
     @Test(priority = 3)
     void testPurchase() {
         driver.get(page.pageUrl);
-
-        /*driver.findElement(page.signin).click();
-        String username = initializeProperties().getProperty("username");
-        String password = initializeProperties().getProperty("password");
-        driver.findElement(page.username).sendKeys(username);
-        driver.findElement(page.userPassword).sendKeys(password);
-        driver.findElement(page.signInBtn).click();*/
-
 
         driver.findElement(page.womenTab).click();
         driver.findElement(page.sortSmall).click();
